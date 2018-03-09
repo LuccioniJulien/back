@@ -14,7 +14,6 @@ app.use(cookieParser())
 
 app.use('/', index)
 
-//app.use('/api/v1/users', users)
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
