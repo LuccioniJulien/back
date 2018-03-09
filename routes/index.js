@@ -15,4 +15,5 @@ router.get('/', function(req, res, next) {
       .then(user => res.json({ user: user }))
   })
 })
+
 module.exports = router
