@@ -1,0 +1,19 @@
+{
+  "development": {
+    "database": "back",
+    "host": "127.0.0.1",
+    "username": "luccionij",
+    "password": null,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "luccionij",
+    "password": null,
+    "database": "back",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "dialect": "postgres"
+  }
+}
