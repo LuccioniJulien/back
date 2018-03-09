@@ -1,18 +1,19 @@
 var express = require('express')
 var router = express.Router()
+const db = require('../models/index')
 
-var db = require('../models/index')
-
-/* GET index */
+/* GET / */
 router.get('/', function(req, res, next) {
   db.user.sync().then(() => {
     db.user
       .create({
         firstName: 'julien',
-        lastName: 'luccioni',
-        email: 'julien.luccioni@2014gmail.com'
+        lastName: 'luccccc',
+        email: 'email'
       })
-      .then(user => res.json({ user: user }))
+      .then(user => {
+        res.json({ user: user })
+      })
   })
 })
 
