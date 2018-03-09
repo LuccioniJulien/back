@@ -2,18 +2,19 @@ require('dotenv').config()
 let Sequelize = require('sequelize')
 
 //INIT DB
-let sequelize = new Sequelize(process.env.DATABASE_URL)
+
 //process.env.DATABASE_URL
 //postgres://user:pass@example.com:5432/dbname
 let db = {}
+db.sequelize = new Sequelize(process.env.DATABASE_URL)
 //INIT MODEL
-db.user = sequelize.define('user', {
+db.user = db.sequelize.define('user', {
   firstName: Sequelize.STRING,
   lastName: Sequelize.STRING,
   email: Sequelize.STRING
 })
 
-sequelize
+db.sequelize
   .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.')
